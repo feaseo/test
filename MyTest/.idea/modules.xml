@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyTest.iml" filepath="$PROJECT_DIR$/MyTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/数据库在sdcard/数据库在sdcard.iml" filepath="$PROJECT_DIR$/数据库在sdcard/数据库在sdcard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/自定义view/自定义view.iml" filepath="$PROJECT_DIR$/自定义view/自定义view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/解析二进制内容/解析二进制内容.iml" filepath="$PROJECT_DIR$/解析二进制内容/解析二进制内容.iml" />
+    </modules>
+  </component>
+</project>
