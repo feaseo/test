@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -31,8 +32,14 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.MyHolder> {
     }
 
     @Override
-    public void onBindViewHolder(MyHolder holder, int position) {
+    public void onBindViewHolder(MyHolder holder, final int position) {
         holder.tv.setText(list.get(position));
+        holder.tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "点击了:" + list.get(position), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
