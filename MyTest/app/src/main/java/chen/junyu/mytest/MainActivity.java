@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import chen.junyu.mytest.adapter.Adapter2;
+import chen.junyu.mytest.util.TestJni;
 
 import static chen.junyu.mytest.R.drawable.e;
 
@@ -23,6 +25,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init1();//测试RecyclerView
+        init2();//测试JNI
+    }
+
+    private void init2() {
+        TestJni jni = new TestJni();
+        String str = jni.getStr();
+        Log.i("23", ">>>>:" + str);
     }
 
     private void init1() {
