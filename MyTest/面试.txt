@@ -1,0 +1,19 @@
+掌门一对一
+	looper和messagequeue的关系
+	设计模式：单例，观察者，装饰，工厂，抽象工厂
+	数据库需要更新表时，需要如何操作（更改字段类型，涉及到兼容以前的数据）
+	rxjava
+	view的绘制流程，onmeasure方法中参数的含义
+	http协议
+	线程和进程之间的关系
+	singletop和singletask模式下，会回调onNewIntent方法
+	线程的两种启动方式
+	线程池，核心的类
+	string,stringBuilder,stringBuff的区别
+	Android界面刷新—— invalidate与postInvalidate区别
+
+卓盟
+	广播的几种发送方式：3种，有序，无序，粘滞
+	service的2种启动方式的区别
+	折半算法，二叉树算法
+
