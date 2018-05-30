@@ -77,7 +77,8 @@ invalidate与postInvalidate区别
 	进程可以包含多个线程。
 	多线程程序只要有一个线程死掉，整个进程也死掉了，而一个进程死掉并不会对另外一个进程造成影响。
 =================================================================
-线程池（https://www.cnblogs.com/dolphin0520/p/3932921.html）
+线程池（https://www.cnblogs.com/dolphin0520/p/3932921.html
+		https://blog.csdn.net/qq_34952110/article/details/78086085）
 	最核心的类是：ThreadPoolExecutor，execute()又是ThreadPoolExecutor的核心方法
 	1）corePoolSize：线程池的基本大小
 	2）maximumPoolSize：线程池中允许的最大线程数
@@ -90,7 +91,17 @@ invalidate与postInvalidate区别
 	3、如果当前线程池工作线程数量已经达到了基本大小，就将新提交的任务提交到阻塞队列排队，等候处理workQueue.offer(command)
 	4、如果队列容量已达上限，并且当前大小poolSize没有达到maximumPoolSize，那么就新增线程来处理任务
 	5、如果队列已满，并且当前线程数目也已经达到上限，此时需要拒绝新增加的任务，如何拒绝，需要取决于线程池的饱和策略RejectedExecutionHandler
+
+一般不提倡我们直接使用ThreadPoolExecutor，而是使用Executors类中提供的几个静态方法来创建线程池
+	Executors.newCachedThreadPool(); 创建一个缓冲池，缓冲池容量大小为Integer.MAX_VALUE
+	Executors.newSingleThreadExecutor();   创建容量为1的缓冲池
+	Executors.newFixedThreadPool(int);     创建固定容量大小的缓冲池
+	Executors.newScheduledThreadPool(int);  有延迟执行和周期重复执行的线程池
 =================================================================
+looper和messagequeue的关系（https://blog.csdn.net/itheimach/article/details/52050910）
+	一个线程只有一个looper
+	Looper构造器中创建MessageQueue对象
+	handler可以有多个
 =================================================================
 =================================================================
 =================================================================
